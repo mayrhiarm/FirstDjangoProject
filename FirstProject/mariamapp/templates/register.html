@@ -1,0 +1,28 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+            <center>
+                <h1>Register for this program</h1>
+                {% if submitted%}
+                        Congratulations you have been registered
+                {% else %}
+
+                <form action="" method="POST">
+
+
+                        {% csrf_token %}
+                        {{ form.as_p}}
+                        <input type="submit" value="Register" class="btn btn-secondary">
+
+
+                </form>
+
+
+                {% endif %}
+
+            </center>
+
+
+{% endblock content %}
